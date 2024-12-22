@@ -171,6 +171,7 @@ GEM
     nokogiri (1.17.2-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    ostruct (0.6.1)
     pg (1.5.9)
     prettier_print (1.2.1)
     psych (5.2.2)
@@ -305,6 +306,7 @@ DEPENDENCIES
   htmlbeautifier
   importmap-rails
   jbuilder
+  ostruct
   pg (~> 1.1)
   prettier_print (~> 1.2)
   puma (>= 5.0)

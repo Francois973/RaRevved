@@ -79,3 +79,4 @@ gem 'tailwindcss-rails', '~> 3.0'
 
 # Authentification
 gem 'devise'
+gem 'ostruct'
