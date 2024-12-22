@@ -53,6 +53,9 @@ group :development, :test do
   gem 'syntax_tree', '~> 6.2'
   gem 'syntax_tree-haml', '~> 4.0'
   gem 'syntax_tree-rbs', '~> 1.0'
+
+  # Erb
+  gem 'htmlbeautifier'
 end
 
 group :development do

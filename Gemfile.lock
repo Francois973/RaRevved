@@ -119,6 +119,7 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
+    htmlbeautifier (1.4.3)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.1.0)
@@ -301,6 +302,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  htmlbeautifier
   importmap-rails
   jbuilder
   pg (~> 1.1)
