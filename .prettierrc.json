@@ -1,0 +1,9 @@
+{
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true,
+  "rubySingleQuote": true,
+  "plugins": ["@prettier/plugin-ruby"],
+  "printWidth": 80
+}
