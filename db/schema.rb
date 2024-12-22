@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_12_22_154625) do
+ActiveRecord::Schema[7.1].define(version: 2024_12_22_154848) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,21 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_22_154625) do
     t.string "brand_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "car_products", force: :cascade do |t|
+    t.bigint "brand_id", null: false
+    t.bigint "model_id", null: false
+    t.bigint "body_type_id", null: false
+    t.integer "year"
+    t.integer "price"
+    t.string "color"
+    t.integer "mileage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["body_type_id"], name: "index_car_products_on_body_type_id"
+    t.index ["brand_id"], name: "index_car_products_on_brand_id"
+    t.index ["model_id"], name: "index_car_products_on_model_id"
   end
 
   create_table "cities", force: :cascade do |t|
@@ -53,5 +68,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_22_154625) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "car_products", "body_types"
+  add_foreign_key "car_products", "brands"
+  add_foreign_key "car_products", "models"
   add_foreign_key "users", "cities"
 end
