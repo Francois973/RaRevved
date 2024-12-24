@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  advertisement: one
+  user: one
+  bid_date: 2024-12-24 08:44:42
+  bid_price: 1
+  bid_status: MyString
+
+two:
+  advertisement: two
+  user: two
+  bid_date: 2024-12-24 08:44:42
+  bid_price: 1
+  bid_status: MyString

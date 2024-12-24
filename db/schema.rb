@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_12_24_073712) do
+ActiveRecord::Schema[7.1].define(version: 2024_12_24_074442) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -25,6 +25,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_24_073712) do
     t.datetime "updated_at", null: false
     t.index ["car_product_id"], name: "index_advertisements_on_car_product_id"
     t.index ["user_id"], name: "index_advertisements_on_user_id"
+  end
+
+  create_table "bids", force: :cascade do |t|
+    t.bigint "advertisement_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "bid_date"
+    t.integer "bid_price"
+    t.string "bid_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["advertisement_id"], name: "index_bids_on_advertisement_id"
+    t.index ["user_id"], name: "index_bids_on_user_id"
   end
 
   create_table "body_types", force: :cascade do |t|
@@ -83,6 +95,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_24_073712) do
 
   add_foreign_key "advertisements", "car_products"
   add_foreign_key "advertisements", "users"
+  add_foreign_key "bids", "advertisements"
+  add_foreign_key "bids", "users"
   add_foreign_key "car_products", "body_types"
   add_foreign_key "car_products", "brands"
   add_foreign_key "car_products", "models"
