@@ -1,4 +1,4 @@
-## 1.0.0 - Start for the bottom
+## 1.0.0 - Start for the bottom - 20/12/2024
 
 - 🎨 Install tailwindcss (#1)
 - 🔐 Add devise on gemfile (#3)
