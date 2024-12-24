@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_12_22_154848) do
+ActiveRecord::Schema[7.1].define(version: 2024_12_24_073712) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "advertisements", force: :cascade do |t|
+    t.bigint "car_product_id", null: false
+    t.bigint "user_id", null: false
+    t.string "title"
+    t.text "body"
+    t.boolean "is_active"
+    t.boolean "is_bid_allowed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["car_product_id"], name: "index_advertisements_on_car_product_id"
+    t.index ["user_id"], name: "index_advertisements_on_user_id"
+  end
 
   create_table "body_types", force: :cascade do |t|
     t.string "body_type_name"
@@ -68,6 +81,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_22_154848) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "advertisements", "car_products"
+  add_foreign_key "advertisements", "users"
   add_foreign_key "car_products", "body_types"
   add_foreign_key "car_products", "brands"
   add_foreign_key "car_products", "models"
