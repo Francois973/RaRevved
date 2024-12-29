@@ -56,6 +56,9 @@ group :development, :test do
 
   # Erb
   gem 'htmlbeautifier'
+
+  # Debug
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -80,3 +83,4 @@ gem 'tailwindcss-rails', '~> 3.0'
 # Authentification
 gem 'devise'
 gem 'ostruct'
+gem 'faker'
