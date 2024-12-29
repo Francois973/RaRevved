@@ -9,7 +9,7 @@ require 'faker'
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-100.times do
+200.times do
   brand_name = Faker::Vehicle.manufacturer
   b = Brand.create!(brand_name:)
 
