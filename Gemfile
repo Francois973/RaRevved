@@ -59,6 +59,9 @@ group :development, :test do
 
   # Debug
   gem 'pry-byebug'
+
+  # Pretty
+  gem 'awesome_print'
 end
 
 group :development do
