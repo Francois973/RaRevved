@@ -5,3 +5,5 @@
 - 🚖 Add brands, car_products, models and body_types (#5)
 - 🚧 Add advertisements table (#7)
 - 🤑 Add bid table (#9)
+- 🚗 Vehicle recovery (#11)
+- 📢 Advertisements controller (#13)
