@@ -10,7 +10,7 @@ require 'awesome_print'
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-200.times do
+200.times do |i|
   cy =
     City.create!(
       city_name: Faker::Address.city,
@@ -62,4 +62,5 @@ require 'awesome_print'
     )
 
   ap "#{ad.title} ====>created"
+  ap "====>#{i + 1}"
 end

@@ -87,3 +87,5 @@ gem 'tailwindcss-rails', '~> 3.0'
 gem 'devise'
 gem 'ostruct'
 gem 'faker'
+
+gem 'pagy', '~> 9.3'
