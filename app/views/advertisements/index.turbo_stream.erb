@@ -1,0 +1,12 @@
+<%= turbo_stream.append :advertisements do %>
+  <div class="grid grid-cols-1 gap-4">
+    <%= render @advertisements %>
+  </div>
+<% end %>
+<%= turbo_stream.replace :pagination do %>
+  <% if @pagy.next.present? %>
+    <%= turbo_frame_tag :pagination,
+                loading: :lazy,
+        src: advertisements_path(format: :turbo_stream, page: @pagy.next) %>
+  <% end %>
+<% end %>
