@@ -1,3 +1,7 @@
+## 1.2.0
+
+- 📜 Add Pagy with Turbo
+
 ## 1.0.0 - Start for the bottom - 20/12/2024
 
 - 🎨 Install tailwindcss (#1)
